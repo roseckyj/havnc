@@ -153,6 +153,13 @@
         window.onscriptsload = function () {
             var host, port, password, path, token;
 
+            // Auto-enter fullscreen mode
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen().catch(function(e) {
+                    console.log("Fullscreen denied:", e);
+                });
+            }
+
             $D('sendCtrlAltDelButton').style.display = "inline";
             $D('sendCtrlAltDelButton').onclick = sendCtrlAltDel;
             $D('xvpShutdownButton').onclick = xvpShutdown;
