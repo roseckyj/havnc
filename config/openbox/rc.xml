@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config>
+  <menu>
+    <file>menu.xml</file>
+  </menu>
+  <keyboard>
+    <keybind key="C-A-Delete">
+      <action name="Exit"/>
+    </keybind>
+  </keyboard>
+</openbox_config>
