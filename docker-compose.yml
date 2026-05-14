@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  havnc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: havnc
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+      - ./config:/config:ro
+    environment:
+      - TZ=${TZ:-UTC}
+      - DISPLAY=:0
+      - NOVNC_PORT=${NOVNC_PORT:-8080}
+      - PORT=8080
+    restart: unless-stopped
+    shm_size: '2gb'

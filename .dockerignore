@@ -1,0 +1,6 @@
+data/*
+.git
+.gitignore
+*.md
+LICENSE.md
+icon.png
